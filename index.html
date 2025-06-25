@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🌤️ Weather App</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="weather-container">
+    <h1>🌦️ Weather App</h1>
+    <button id="darkModeToggle" title="Toggle Dark Mode">🌓</button>
+
+    <div class="input-area">
+      <input type="text" id="cityInput" placeholder="Enter city name..." />
+      <button id="searchBtn">Search</button>
+      <button id="geoBtn" title="Get weather by location">📍</button>
+    </div>
+
+    <div id="errorBox" class="hidden error-box"></div>
+    <div id="loader" class="loader hidden"></div>
+
+    <div id="weatherResult" class="weather-card hidden">
+      <h2 id="cityName"></h2>
+      <img id="weatherIcon" class="weather-icon hidden" src="" alt="Weather Icon" />
+      <p id="description"></p>
+      <p><strong>Temperature:</strong> <span id="temp"></span>°C</p>
+      <p><strong>Feels Like:</strong> <span id="feels"></span>°C</p>
+      <p><strong>Humidity:</strong> <span id="humidity"></span>%</p>
+      <p><strong>Wind Speed:</strong> <span id="wind"></span> km/h</p>
+    </div>
+
+    <div id="forecast" class="forecast hidden">
+      <h3>3-Day Forecast</h3>
+      <div id="forecastCards" class="forecast-cards"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
